@@ -8,7 +8,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
     return (
         <body>
-            <div className="text-3xl font-bold underline">{children}</div>
+            <div className="center">{children}</div>
         </body>
     )
 }
