@@ -5,6 +5,7 @@ export default function LandingPage() {
     return (
         <div>
             <h1>This is the landing page</h1>
+            {posts.map((post: Post) => <p className="pl-4">{post.title}</p>)}
         </div>
     )
 }
