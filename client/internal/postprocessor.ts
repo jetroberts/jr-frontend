@@ -18,7 +18,7 @@ export function getPosts(): Post[] {
         const fullPath = path.join(postsLocation, filename)
         const filecontents = fs.readFileSync(fullPath, 'utf8')
 
-        const matterResult = matter(filecontents)        
+        const matterResult = matter(filecontents)
 
         return <Post>{
             id: fileId,

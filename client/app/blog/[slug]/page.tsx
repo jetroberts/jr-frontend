@@ -1,10 +1,11 @@
+import Markdown from "markdown-to-jsx"
 import { getPosts, getPost, Post } from "../../../internal/postprocessor"
 
 export async function generateStaticParams() {
     const posts: Post[] = getPosts()
 
     return posts.map((post) => ({
-        slug: post.title,
+        slug: post.id,
     }))
 }
 
@@ -21,7 +22,7 @@ export default function PostPage({ params }: PostPageProps) {
     return (
         <div>
             <h1>{slug}</h1>
-            <p>{post.content}</p>
+            <Markdown>{post.content}</Markdown> 
         </div>
     )
 }

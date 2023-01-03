@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import Navbar from "../components/navbar"
 import './globals.css'
 
 interface LayoutProps {
@@ -7,8 +8,9 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
     return (
-        <body>
-            <div className="center">{children}</div>
+        <body className="container mx-auto">
+            <Navbar />
+            <div>{children}</div>
         </body>
     )
 }
