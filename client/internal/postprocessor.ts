@@ -35,7 +35,12 @@ export function getPost(id: string): Post {
     const posts: Post[] = getPosts()
     const currentPost = posts.filter(post => post.id === id)
     if(currentPost.length === 0) {
-        return
+        return {
+            id: "",
+            title: "",
+            date: "",
+            content: "",
+        }
     }
 
     return currentPost[0]
