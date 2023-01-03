@@ -1,5 +1,5 @@
 export default function Head() {
     return (
-        <title>Blog</title>
+        <title>Home</title>
     )
 }

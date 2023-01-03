@@ -20,7 +20,7 @@ export function getPosts(): Post[] {
 
         const matterResult = matter(filecontents)
 
-        return <Post>{
+        return {
             id: fileId,
             title: matterResult.data.title,
             date: matterResult.data.date,
@@ -35,7 +35,7 @@ export function getPost(id: string): Post {
     const posts: Post[] = getPosts()
     const currentPost = posts.filter(post => post.id === id)
     if(currentPost.length === 0) {
-        return <Post>{}
+        return
     }
 
     return currentPost[0]

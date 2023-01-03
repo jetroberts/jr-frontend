@@ -1,10 +1,10 @@
 export default function Navbar() {
     return (
-        <div>
+        <div className="border-b-2">
             <nav>
-                <ul className="flex-1 flex-row">
-                    <li>Blog</li>
-                    <li>About</li>
+                <ul className="flex flex-row pb-2">
+                    <li className="px-2 text-lg">Blog</li>
+                    <li className="px-2 text-lg">About</li>
                 </ul>
             </nav>
         </div>
