@@ -8,9 +8,11 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
     return (
-        <body className="container mx-auto">
-            <Navbar />
-            <div>{children}</div>
-        </body>
+        <html lang="en">
+            <body className="container mx-auto">
+                <Navbar />
+                <div>{children}</div>
+            </body>
+        </html>
     )
 }
